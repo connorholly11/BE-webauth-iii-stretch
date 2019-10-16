@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { axiosWithAuth } from "../utils/axiosWithAuth";
 import axios from "axios";
 
-const Users = () => {
+const Users = props => {
+  console.log("props", props);
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
@@ -17,6 +18,7 @@ const Users = () => {
   const SignOut = e => {
     e.preventDefault();
     localStorage.removeItem("token");
+    props.history.push("/");
   };
 
   return (
