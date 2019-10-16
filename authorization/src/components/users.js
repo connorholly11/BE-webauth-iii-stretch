@@ -29,7 +29,7 @@ const Users = () => {
         console.log(users);
         return (
           <div key={users.id}>
-            <h1>Username: {users.username}</h1>
+            <p>Username: {users.username}</p>
           </div>
         );
       })}
